@@ -23,6 +23,9 @@ Note: m and n will be at most 100.
  * So we can simply build a DP matrix to get the sum.
  * Since each time we only use value left and value above, actually we just need a rolling array (see uniquePaths2())
  * 
+ * Time complexity is O(mn)
+ * Space complexity before using rolling row is O(mn), after using rolling row is O(n)
+ * 
  * @author hpPlayer
  * @date Nov 3, 2015 11:48:33 PM
  */

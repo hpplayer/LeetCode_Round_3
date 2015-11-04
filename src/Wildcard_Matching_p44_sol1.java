@@ -28,6 +28,7 @@ isMatch("aab", "c*a*b") ¡ú false
  * 
  * Remark:
  * "*" is very powerful it can match "", "a", "ab", and other sequences
+ * This problem is similar to problem Regular_Expression_Matching_p10_sol1
  * 
  * Sol1 is dp solution, which costs O(mn)
  * Sol2 is iterative backtracking solution, which also costs O(mn). But we can return early if we found unmatched pair, so 
