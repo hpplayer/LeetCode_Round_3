@@ -33,7 +33,9 @@ You should return the indices: [0,9].
  * 
  * Remark:
  * 1. remember we always move left and right pointer len unit in each step!!!!!!!!!!!!!!
- * 2. This solution is similar to solution Minimum_Window_Substring_p76_sol1
+ * 2. This solution is similar to solutions:
+ * 1) Minimum_Window_Substring_p76_sol1
+ * 2) Longest_Substring_with_At_Most_Two_Distinct_Characters_p159_sol1
  * 
  * @author hpPlayer
  * @date Nov 9, 2015 1:44:33 AM

@@ -29,7 +29,10 @@ If there are multiple such windows, you are guaranteed that there will always be
  * a total of 2N times. Therefore, assume string s is longer than string t, then the run time complexity must be in O(N).
  * Space complexity: O(1) constant, since we only use two count[]s which are 256 in len
  * 
- * This solution is similar to solution Substring_with_Concatenation_of_All_Words_p30_sol1
+ * This solution is similar to solutions:
+ * 1) Substring_with_Concatenation_of_All_Words_p30_sol1
+ * 2) Longest_Substring_with_At_Most_Two_Distinct_Characters_p159_sol1
+ * 
  * 
  * @author hpPlayer
  * @date Nov 3, 2015 8:38:26 PM
