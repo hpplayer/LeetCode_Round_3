@@ -24,6 +24,8 @@ What is the minimum candies you must give?
  * Sol1 is a solution using a temp table with two pass algorithm
  * Sol2 is a solution using two temp variable with one pass algorithm but is hard to come up with
  * 
+ * Solution Trapping_Rain_Water_p42_sol1 also uses similar approach that scanning the array forward and backward
+ * 
  * @author hpPlayer
  * @date Nov 9, 2015 3:33:02 PM
  */
