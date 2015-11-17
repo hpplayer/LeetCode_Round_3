@@ -21,6 +21,7 @@ Return true because "leetcode" can be segmented as "leet code".
  * Time complexity: O(n^2)
  * Space complexity: O(n)
  * 
+ * This solution is similar to Perfect_Squares_p279_sol1m, where we also need to use a dp[] and scan all cells before current index
  * @author hpPlayer
  * @date Nov 5, 2015 8:06:00 PM
  */
