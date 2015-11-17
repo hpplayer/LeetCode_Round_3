@@ -18,6 +18,14 @@ The read function will only be called once for each test case.
  * 
  * this problem is a very practical problem, and we don't need to know much about the algorithm
  * 
+ * There will be two ending cases for read 1) we have read n chars 2) we reach the end of file.
+ * So we will check this two condition before we read next chars from read4().
+ * In those boundary cases, we may not read 4 chars due to end of file or we read 4 chars but are now allowed to write 4 chars due
+ * to n chars limits. So our output on buf[] should be depend on the real chars we read
+ * 
+ * Time complexity: O(n/4)* cost in read4() as we need read n chars in total
+ * Space complexity: O(1) as we use an array of len 4 to be the temp buffer
+ * 
  * @author hpPlayer
  * @date Nov 16, 2015 10:39:04 PM
  */
