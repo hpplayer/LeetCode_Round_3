@@ -29,7 +29,7 @@ The read function will only be called once for each test case.
  * @author hpPlayer
  * @date Nov 16, 2015 10:39:04 PM
  */
-public class Read_N_Characters_Given_Read4_p157_sol1 {
+public class Read_N_Characters_Given_Read4_I_p157_sol1 {
 	/* The read4 API is defined in the parent class Reader4.
     int read4(char[] buf); */
     /**
