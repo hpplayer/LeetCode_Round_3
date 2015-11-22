@@ -10,9 +10,13 @@ import java.util.*;
  * If both nodes are null, then we return null
  * 
  * Remark:
- * We can't simply check if a node has two non-null children results to say if this is LCA or not.
- * This is because we may have a such case that a node itself is one of the target nodes, while the other target node is a 
- * children of it 
+ * How do we check if a node is LCA? Generally speaking, if we get a such node whose children list has two non-null results, then
+ * this node should be LCA. But we may also have case that a LCA can only have one non-null result in children list because this
+ * node itself is a LCA. So we have to let the code return the result to the MyRoot node, then check the non-null result in
+ * its children list before we can say which node is LCA!!!!!!!!!!!!!!!!!
+ * 
+ * Time complexity: O(n)
+ * Space complexity: O(n)
  * 
  * @author hpPlayer
  * @date Nov 21, 2015 11:41:10 PM
