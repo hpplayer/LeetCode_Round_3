@@ -15,7 +15,7 @@ Returns the index of the first occurrence of needle in haystack, or -1 if needle
  * 
  * Remark:
  * we will not put ending condition in the for loop unless we reach two cases mentioned above, so it is like a while(true) loop,
- * we couldn't write any statments after the for loop!!!!!!!!!!!!
+ * we couldn't write any statement after the for loop!!!!!!!!!!!!
  * Time complexity: O(mn)
  * Space complexity: O(1)
  * 
