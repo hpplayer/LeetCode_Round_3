@@ -52,7 +52,7 @@ public class Best_Time_to_Buy_and_Sell_Stock_III_p123_sol1 {
             
             //cover the case that we will make two transactions before index i
             //firstBuy and secondBuy will start that have different value if we found a second low point
-            //if we we only have one low point, then firstBuy = secondBuy and  firstBuyAndSell = secondBuyAndSell
+            //if we only have one low point, then firstBuy = secondBuy and  firstBuyAndSell = secondBuyAndSell
             
             //include firstBuyAndSell into secondBuy
             //if we finish the first transaction and buy the stock second time at current index i
