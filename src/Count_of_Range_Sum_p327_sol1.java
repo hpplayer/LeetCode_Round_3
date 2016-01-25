@@ -35,6 +35,9 @@ The three ranges are : [0, 0], [2, 2], [0, 2] and their respective sums are: -2,
  * 
  * The time complexity will be O(NLogN). As we have logN layers during merge and split and at most N cells to merge in each layer
  * 
+ * Remark:
+ * This problem is similar to problem Count_of_Smaller_Numbers_After_Self_p315_sol1
+ * 
  * @author hpPlayer
  * @date Jan 23, 2016 10:51:54 PM
  */
