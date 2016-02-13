@@ -1,3 +1,5 @@
+import java.util.Arrays;
+
 /*
 Wiggle Sort
 
@@ -23,6 +25,11 @@ For example, given nums = [3, 5, 2, 1, 6, 4], one possible answer is [1, 6, 2, 5
  * @date Nov 19, 2015 1:51:58 AM
  */
 public class Wiggle_Sort_p280_sol1 {
+	public static void main(String[] args){
+		int[] nums = {3, 5, 2, 1, 6, 4};
+		new Wiggle_Sort_p280_sol1().wiggleSort(nums);
+		System.out.println(Arrays.toString(nums));
+	}
     public void wiggleSort(int[] nums) {
         //we compare current value with left value
         //if current index is odd, then it must >= left value
