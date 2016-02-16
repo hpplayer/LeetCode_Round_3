@@ -19,7 +19,10 @@ You may assume k is always valid, 1 ¡Ü k ¡Ü array's length.
  * and get k largest number ahead. 
  * To handle extreme case and give a more universal solution, we will shuffle the array in the beginning with Fisher¨CYates shuffle method
  * 
- * Time complexity: O(N)
+ * Time complexity: O(N), the worst case should be O(n^2), but we will shuffle the array in the beginning to avoid extreme bad case.
+ * Each time we will discard half of the array, then scan the range to find the kth element, therefore the time complexity will be 
+ * n + n/2 + n/4 + .... = O(2n) = O(n)
+ * 
  * Space complexity: O(1)
  * 
  * Sol2 provides a max Heap solution
