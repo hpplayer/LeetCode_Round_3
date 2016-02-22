@@ -65,7 +65,7 @@ public class Longest_Consecutive_Sequence_p128_sol1 {
 	        return result;
 	    }
 	
-	//below program is based on another assumtion, not working for this problem
+	//below program is based on another assumption, not working for this problem
     public int longestConsecutive2(int[] nums) {
         Map<Integer, Integer> hs = new HashMap<Integer, Integer>();
         
