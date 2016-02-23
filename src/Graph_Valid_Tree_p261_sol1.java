@@ -31,6 +31,8 @@ Note: you can assume that no duplicate edges will appear in edges. Since all edg
  * This problem can also be solved by DFS or Topological sort with BFS approach
  * But they are lengthy and slower than this approach probably due to the cost on stack and queue
  * 
+ * Sol2 provides a BFS solution, but we need to take extra care of extreme case that we only have one node and zero edges
+ * 
  * @author hpPlayer
  * @date Feb 21, 2016 5:21:51 PM
  */
