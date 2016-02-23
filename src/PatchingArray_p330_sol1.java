@@ -52,10 +52,14 @@ public class PatchingArray_p330_sol1 {
         //scan the input array and check if we have covered all numbers from 1 to current sum
         
         //use long type to prevent overflow
+    	//given input array is positive so currSum at least will start with 1
         long currSum = 1;
         //index is pointer in array, result is num of patches we need
         int index = 0, result = 0;
         
+        //we need include currSum == n, since we want include n as well
+        //ex: n = 1 and nums = [], then to include n = 1, we have to include currSum = 1 in the while loop as well
+        //otherwise we would get count 0
         while(currSum <= n){
             if(index < nums.length && nums[index] <= currSum){
                 //if current num in array <= currSum, then we can cover currSum and all sums until currSum + nums[index]

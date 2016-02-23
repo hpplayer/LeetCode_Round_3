@@ -23,12 +23,19 @@ Given word = "word", return the following list (order does not matter):
  * Space complexity: same as above
  * 
  * Remark:
+ * Sol2 uses 32bit int mask as the indicator that whether we need to compress char or add char directly, but it will not work for input array that 
+ * has len > 32. For those long input array, it is better to use recursive version like sol1
  * 
- * Sol2 is my first attempt solution. Instead of using count variable, I just check the last char in the result. If it is integer, then I can either 
+ * Sol3 is my first attempt solution. Instead of using count variable, I just check the last char in the result. If it is integer, then I can either 
  * add a char from input or abbreviate current char and accumulate the count variable. If it is char, then we will do the same thing
  * 
- * This problem is very similar to problem subsets, here we totally have 2^n possible abbreviation ways. That's because each char can either be abbreviated
- * or kept as it is therefore, there are totally 2^n ways to abbreviate the input.
+ * This problem is very similar to problem subsets.
+ * Sol1 is similar to Subsets_p78_sol1
+ * Sol2 is similar to Subsets_p78_sol3
+ * Sol3 is similar to Subsets_p78_sol2
+ * 
+ * Here we totally have 2^n possible abbreviation ways. That's because each char can either be abbreviated or kept as it is therefore, 
+ * there are totally 2^n ways to abbreviate the input.
  * 
  * @author hpPlayer
  * @date Feb 22, 2016 10:37:59 AM
