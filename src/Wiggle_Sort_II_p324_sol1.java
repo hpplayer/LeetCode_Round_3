@@ -77,6 +77,8 @@ public class Wiggle_Sort_II_p324_sol1 {
         //Therefore, we want virtual index in A firstly matched to odd indexes in nums, which should be large
         //then match smaller numbers to even indexes in nums, which should be small
         //As regard to numbers = median, even they are adjacent in virtual array, they will finally assign apart in real array
+        //Ex: after sort: In virtual array A we get: L1 L2 L3 M1 M2 M3 S1 S2 S3
+        //In real array we will get  M2 L1 M3 L2 S1 L3 S2 M1 S3 where we have odd num > its two even num neighbors  
         int LargeEnd = 0, smallStart = nums.length - 1;
         for(int i = 0; i <= smallStart; i++){
             if(nums[A(i)] > median){
