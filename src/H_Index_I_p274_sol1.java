@@ -64,7 +64,7 @@ A faster approach is to use extra space.
  * @author hpPlayer
  * @date Feb 20, 2016 2:34:03 PM
  */
-public class H_Index_p274_sol1 {
+public class H_Index_I_p274_sol1 {
     public int hIndex(int[] citations) {
         //we firstly sort the array, and put smaller citations in front. Our array will then have those property: for citation c at index i
         //we will have (len - i) papers that have citations >= c. Therefore when we are reading the array forward, we are actually reading the 

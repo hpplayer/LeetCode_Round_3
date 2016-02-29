@@ -19,6 +19,7 @@ For example, given n = 12, return 3 because 12 = 4 + 4 + 4; given n = 13, return
  * Space complexity: O(n)
  * 
  * This solution is similar to Word_Break_I_p139_sol1, where we also need to scan all cells before current index
+ * This solution is also similar to Coin_Change_p322_sol1, where we need to update dp table based on coins table
  * 
  * Actually, we don't need to know the dp value for each number smaller than n. We just want to know the value that help us
  * get input n. BFS can help do that, see sol2

@@ -14,8 +14,9 @@ Return a deep copy of the list.
  * Here is the basic idea:
  * We make copy of the input list through the "next" pointer. To avoid duplicate copy we use a HashMap to store copied nodes. 
  * To make a copy of a node, we need deal with 3 variables: 1) next node 2) random node 3) label.
- * If we don't have 1) and 2) in Hash table, we firstly create a simple copy of them, then we will make a full copy when we move to 
- * that node. This operation can help us make the logic more clear i.e. we only add details to the node when we move to this node.
+ * If we don't have 1) and 2) in Hash table, we firstly create a simple copy of them(this node and label), then we will make
+ * a full copy(all its connected nodes) when we move to that node.
+ * This operation can help us make the logic more clear i.e. we only add details to the node when we move to this node.
  * 
  * Remark:
  * 1) To avoid stack overflow problem, it is better to use the iterative version.

@@ -12,7 +12,7 @@
  * @author hpPlayer
  * @date Feb 20, 2016 11:16:40 PM
  */
-public class H_Index_p274_sol2 {
+public class H_Index_I_p274_sol2 {
     public int hIndex(int[] citations) {
         //count sort solution. Instead of using built-in sort function, now we build a new array with citation value
         //as the index, and assign each paper to its corresponding cell.
