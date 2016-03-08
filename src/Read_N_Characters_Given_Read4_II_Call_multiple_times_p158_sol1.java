@@ -77,6 +77,8 @@ public class Read_N_Characters_Given_Read4_II_Call_multiple_times_p158_sol1 {
             
             //record how many chars remain unread
             tempLen = realRead - canWrite;
+            //tempStart decides where to start in next call. We have read canWrite chars based on old tempStart
+            //to get new tempStart we will use "%4" operation.
             //if tempStart + canWrite <= 3, then tempStart should stay in the place tempStart + canWrite
             //if tempStart + canWrite == 4, then we should reset tempStart to be the index 0
             //so it is perfect to use %4 operation            
