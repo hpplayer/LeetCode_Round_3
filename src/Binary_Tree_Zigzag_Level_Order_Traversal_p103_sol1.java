@@ -20,46 +20,61 @@ return its zigzag level order traversal as:
 ]
 */
 
+/**
+ * Deque + BFS solution
+ * 
+ * We need a deque in this solution to read node from front or back freely
+ * In this solution we use level no. to decide where to read deque.
+ * To make the read from queue works correctly, we have to poll old node from one direction and offer new node in another direction
+ * To make the node in result having a zigzag shape, we require even level and odd level have different read and write order.
+ * If even level read front and add back, then we need odd level read back and write front, and vice versa.
+ * In this way, the node we read will from the zigzag order, and we can add them to result follow the read order
+ * 
+ * Time complexity: O(N)
+ * Space complexity: O(N)
+ * 
+ * @author hpPlayer
+ * @date Mar 10, 2016 10:05:41 AM
+ */
 public class Binary_Tree_Zigzag_Level_Order_Traversal_p103_sol1 {
-	public static void main(String[] args){
-		TreeNode a = new TreeNode(1);
-		TreeNode b = new TreeNode(2);
-		TreeNode c = new TreeNode(3);
-		a.left = b;
-		a.right = c;
-		b.left = new TreeNode(4);
-		c.right = new TreeNode(5);
-		System.out.println(new Binary_Tree_Zigzag_Level_Order_Traversal_p103_sol1().zigzagLevelOrder(a));
-	}
     public List<List<Integer>> zigzagLevelOrder(TreeNode root) {
-        boolean needReverse = false;
+        //Deque + BFS solution, use BFS to visit the tree level by level, use Deque to help get the forward and backward order
         
+        //boundary check
         if(root == null) return new ArrayList<List<Integer>>();
         
         List<List<Integer>> result = new ArrayList<List<Integer>>();
-        
         Deque<TreeNode> que = new LinkedList<TreeNode>();
-        
         que.offer(root);
+        
+        //use level to decide where to poll from que
+        int level = 0;
         
         while(!que.isEmpty()){
             int size = que.size();
-            LinkedList<Integer> temp = new LinkedList<Integer>();
+            List<Integer> temp = new ArrayList<Integer>();
             
-            for(int i = 0; i < size; i++){          
-                if(!needReverse){
-                    TreeNode curr = que.pollLast();      
-                    temp.offerLast(curr.val);
-                    if(curr.left != null) que.offerFirst(curr.left);
-                    if(curr.right != null) que.offerFirst(curr.right);
-                } else{
-                	TreeNode curr = que.pollFirst();     
-                    temp.offerLast(curr.val);
-                    if(curr.right != null) que.offerLast(curr.right);
+            for(int i = 0; i < size; i++){
+                if(  (level&1) == 0  ){
+                    //in even level, we can pollFirst/offerLast or pollLast/offerFirst
+                    //Accordingly in odd level, we need pollLast/offerFirst or pollFirst/offerLast
+                    //In either way, we require the write and read order in two levels is reversed 
+                    //here we choose pollFirst/offerLast, of course we can choose pollLast/offFirst as well, but in that way we need to change
+                	//read/write order in odd level to be pollFirst/offerLast
+                    TreeNode curr = que.pollFirst();
+                    temp.add(curr.val);
                     if(curr.left != null) que.offerLast(curr.left);
-                }
+                    if(curr.right != null) que.offerLast(curr.right);
+                }else{
+                    //Accordingly, here we choose pollLast/offerFirst
+                    TreeNode curr = que.pollLast();
+                    temp.add(curr.val);
+                    if(curr.right != null) que.offerFirst(curr.right);
+                    if(curr.left != null) que.offerFirst(curr.left);
+                }                
             }
-            needReverse = needReverse? false : true;
+            
+            level++;
             result.add(temp);
         }
         
