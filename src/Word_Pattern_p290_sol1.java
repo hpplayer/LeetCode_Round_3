@@ -29,6 +29,8 @@ You may assume pattern contains only lowercase letters, and str contains lowerca
  * Remark:
  * 1) Since we use Integer to record index, we need use equals() to compare two integers!
  * 2)Sol2 provides the solution that use char and string as map value, but it becomes more complicated than sol1 
+ * 3) this solution is similar to Isomorphic_Strings_p205_sol1, where we also record the index in HashMap to make sure correct mapping
+ * 
  * @author hpPlayer
  * @date Mar 2, 2016 10:17:58 PM
  */
