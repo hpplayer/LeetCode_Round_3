@@ -59,8 +59,8 @@ public class Binary_Tree_Zigzag_Level_Order_Traversal_p103_sol1 {
                     //in even level, we can pollFirst/offerLast or pollLast/offerFirst
                     //Accordingly in odd level, we need pollLast/offerFirst or pollFirst/offerLast
                     //In either way, we require the write and read order in two levels is reversed 
-                    //here we choose pollFirst/offerLast, of course we can choose pollLast/offFirst as well, but in that way we need to change
-                	//read/write order in odd level to be pollFirst/offerLast
+                    //here we choose pollFirst/offerLast
+                	//of course we can choose pollLast/offFirst as well, but in that way we need to change read/write order in odd level to be pollFirst/offerLast
                     TreeNode curr = que.pollFirst();
                     temp.add(curr.val);
                     if(curr.left != null) que.offerLast(curr.left);
