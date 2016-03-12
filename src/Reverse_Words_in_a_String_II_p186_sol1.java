@@ -25,6 +25,8 @@ Could you do it in-place without allocating extra space?
  * Time complexity: reverse each word in input array. O(n), reverse the whole array O(n), so the total time complexity is still O(n)
  * Space complexity: we solve the problem in place, so the space complexity is O(1)
  * 
+ * Remark:
+ * The way we used to rotate string can also be used in Rotate_Array_p189_sol1
  * @author hpPlayer
  * @date Nov 13, 2015 1:19:05 AM
  */
@@ -37,7 +39,7 @@ public class Reverse_Words_in_a_String_II_p186_sol1 {
         //we firstly reverse each word in s
         for(int right = 0; right <= s.length; right++){
             //word is delimited by space except the last word
-            //so we just need ti check space and right boundary to identify a word
+            //so we just need to check space and right boundary to identify a word
             if(right == s.length || s[right] == ' '){
                 reverse(left, right - 1, s);
                 //update left to be the start index of next word
