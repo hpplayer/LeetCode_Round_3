@@ -52,7 +52,7 @@ public class Construct_Binary_Tree_from_Inorder_and_Postorder_Traversal_p106_sol
         
         //find the root node in inorder[], so we can recursively split the tree into left and right subtrees
         //use i to find the index of cell in inorder[] that has same value with curr root val
-        int i = 0;
+        int i = c;
         for(; i <= d; i++){
             if(inorder[i] == postorder[b]) break;
         }
