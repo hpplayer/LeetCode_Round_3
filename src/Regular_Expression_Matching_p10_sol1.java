@@ -59,9 +59,7 @@ public class Regular_Expression_Matching_p10_sol1 {
                 if(i > 0 && (s.charAt(i-1) == p.charAt(j-1) || p.charAt(j-1) == '.')){
                     //non "*" char, if match, then we check the match result of previous substring  
                     dp[i][j] = dp[i-1][j-1] ;
-                }
-                
-                if(p.charAt(j-1) == '*'){
+                }else if(p.charAt(j-1) == '*'){
                     //in this problem, "*" is used to manipulate preceding char
                     //so now we have two cases: 1) use preceding char 0 time 2) use preceding char multiple times
 

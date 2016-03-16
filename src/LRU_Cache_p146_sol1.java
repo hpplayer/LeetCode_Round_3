@@ -17,6 +17,8 @@ set(key, value) - Set or insert the value if the key is not already present. Whe
  * Sol1 is double-linkedList implementation
  * Sol2 is built-on linkedHashMap implementation
  * 
+ * Remark: we can use the size of hashMap to track how many nodes we have in the cache, but I did not list it here
+ * 
  * @author hpPlayer
  * @date Nov 2, 2015 8:13:24 PM
  */

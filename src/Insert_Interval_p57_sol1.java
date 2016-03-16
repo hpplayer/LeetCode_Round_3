@@ -28,6 +28,9 @@ This is because the new interval [4,9] overlaps with [3,5],[6,7],[8,10].
  * Remark:
  * since we will remove interfered intervals after merged to newInterval, we need to use interval.size() to get the real-time size of list!!!!!!!!!!!
  * 
+ * sol1 makes use of the input, so we dont need an extra result list, however it will be slower due to the remove() cost
+ * sol2 lists the traditional solution, but use an extra result list, so it is faster
+ * 
  * @author hpPlayer
  * @date Nov 7, 2015 2:18:33 AM
  */

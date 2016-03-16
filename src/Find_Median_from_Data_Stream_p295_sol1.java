@@ -13,6 +13,8 @@ import java.util.*;
  * to get the median
  * Space complexity: O(N) as we will store all inputs into heap
  * 
+ * Sol2 lists a solution that use minQ to store the first half if elements and use maxQ to store the second half of elements
+ * Two solutions are nearly identical, but with a minor difference in preprocessing the input data before inserting into pq
  * @author hpPlayer
  * @date Nov 4, 2015 7:08:39 PM
  */

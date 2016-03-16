@@ -89,6 +89,9 @@ public class Maximum_Gap_p164_sol1 {
         
         for(bucket temp : buckets){
             //if case we don't have value in current bucket, we just skip it
+        	//we cant compare temp.min with Integer.MAX_VALUE, since int_max may appear in the input, so we may actualy have a 
+        	//bucket with max = int_max. By contrast, we wouldn't have negative in the input, therefore if max = int_min, it means 
+        	//we definitely don't have num in this bucket
             if(temp.max == Integer.MIN_VALUE) continue;
             //otherwise, we use current bucket.min - last valid bucket.max to get the gap between two buckets
             result = Math.max(result, temp.min - prev);
