@@ -75,7 +75,7 @@ You may assume the number of calls to update and sumRange function is distribute
  * O(2 * N) as we need an O(2 * N) array to store nodes
  * 
  * Sol1 provides a segment tree approach
- * Sol2 provides a BIT approach
+ * Sol2 provides a BIT approach which is faster (O(2*N) vs O(NlogN))
  * 
  * @author hpPlayer
  * @date Apr 20, 2016 9:37:19 PM
@@ -149,7 +149,7 @@ public class Range_Sum_Query_Mutable_p307_sol1 {
         j += n;
         
         //we will update sum inside the look therefore we need include i == j case 
-        //we iteratively go through the tree and calculate the sum
+        //we iteratively go through the tree and calculate the sum until whole range is covered
         while(i <= j){
             //if range left boundary is the right child of a node, then we will not visit this node to avoid add unnecessary vals,
             //instead, we just add val of curr left boundary node, and go to its sibling, then go to up layers from its sibling
