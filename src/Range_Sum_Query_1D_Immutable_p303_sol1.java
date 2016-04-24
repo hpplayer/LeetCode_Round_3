@@ -30,12 +30,12 @@ There are many calls to sumRange function.
  * @author hpPlayer
  * @date Apr 17, 2016 11:32:34 PM
  */
-public class Range_Sum_Query_Immutable_p303_sol1 {
+public class Range_Sum_Query_1D_Immutable_p303_sol1 {
     //DP solution. Preprocess the input and store all subarray sums in an extra array
     
     int[] sums;
     
-    public Range_Sum_Query_Immutable_p303_sol1(int[] nums) {
+    public Range_Sum_Query_1D_Immutable_p303_sol1(int[] nums) {
         //sums[i] means the sum from index 0 to i - 1, therefore to include all sums, we need a sum[] with len + 1 length
         sums = new int[nums.length + 1];
         
