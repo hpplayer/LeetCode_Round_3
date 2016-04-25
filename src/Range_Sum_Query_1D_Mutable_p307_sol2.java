@@ -55,15 +55,17 @@
  * Space complexity:O(N)
  * 
  * Remark:
- * Unlike sol1, where indexing in tree starts with 1 as well but not including root node, here we include root node
- * so we need + 1 to convert indexing
+ * 1. in sol1, our indexing conversion is done in j = i + n, where we also convert 0-based indexing to 1-based indexing
+ * Here, we need + 1 to convert indexes
+ * 2. build/update are so similar that we can acutally combine them together. Although I didn't show it here, we can
+ * actually iteratively call update() when build the BIT tree
  * 
  * @author hpPlayer
  * @date Apr 21, 2016 11:05:46 PM
  */
-public class Range_Sum_Query_Mutable_p307_sol2 {
+public class Range_Sum_Query_1D_Mutable_p307_sol2 {
 	public static void main(String[] args){
-		Range_Sum_Query_Mutable_p307_sol2 test = new Range_Sum_Query_Mutable_p307_sol2(new int[]{1,3,5, 6, 7, 8,9,10,11});
+		Range_Sum_Query_1D_Mutable_p307_sol2 test = new Range_Sum_Query_1D_Mutable_p307_sol2(new int[]{1,3,5, 6, 7, 8,9,10,11});
 		System.out.println(test.sumRange(0, 2));
 		test.update(0, 3);
 		System.out.println(test.sumRange(0, 2));
@@ -75,7 +77,7 @@ public class Range_Sum_Query_Mutable_p307_sol2 {
     int[] BIT;
     int n;
     
-    public Range_Sum_Query_Mutable_p307_sol2(int[] nums) {
+    public Range_Sum_Query_1D_Mutable_p307_sol2(int[] nums) {
         this.nums = nums;
         n = nums.length;
         //To make building tree more convenient, we let node with index 0 becomes a dummy node, and our real 

@@ -1,7 +1,8 @@
 import java.util.*;
 
 /*
-You are given an integer array nums and you have to return a new counts array. The counts array has the property where counts[i] is the number of smaller elements to the right of nums[i].
+You are given an integer array nums and you have to return a new counts array. The counts array has the property where counts[i] is the number
+of smaller elements to the right of nums[i].
 
 Example:
 
@@ -24,6 +25,8 @@ Return the array [2, 1, 1, 0].
  * the count[] without extra effort. For values before current value in left part, we don't need to worry about them as their numbers have
  * already been counted before we put them there, i.e. we have scanned them in down layers before.
  * 
+ * The smaller numbers on the right of a number are exactly those that jump from its right to its left during the merge sort.
+ * So in our solution, we only update count[] when we found smaller numbers are from right side (curr val in left[] > curr val in right[])
  * 
  * Remark:
  * 1) This problem is similar to problem Count_of_Range_Sum_p327_sol1

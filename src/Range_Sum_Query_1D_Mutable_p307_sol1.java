@@ -80,9 +80,9 @@ You may assume the number of calls to update and sumRange function is distribute
  * @author hpPlayer
  * @date Apr 20, 2016 9:37:19 PM
  */
-public class Range_Sum_Query_Mutable_p307_sol1 {
+public class Range_Sum_Query_1D_Mutable_p307_sol1 {
 	public static void main(String[] args){
-		Range_Sum_Query_Mutable_p307_sol1 test = new Range_Sum_Query_Mutable_p307_sol1(new int[]{1,3,5} );
+		Range_Sum_Query_1D_Mutable_p307_sol1 test = new Range_Sum_Query_1D_Mutable_p307_sol1(new int[]{1,3,5} );
 		test.sumRange(0, 2);
 	}
     //Segment tree solution (array version)
@@ -93,7 +93,7 @@ public class Range_Sum_Query_Mutable_p307_sol1 {
     //use n to store the len of array
     int n;
     
-    public Range_Sum_Query_Mutable_p307_sol1(int[] nums) {
+    public Range_Sum_Query_1D_Mutable_p307_sol1(int[] nums) {
         n = nums.length;
         tree = new int[n * 2];
         buildTree(nums);
