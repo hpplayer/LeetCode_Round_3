@@ -28,6 +28,7 @@ A solution set is:
  * Time complexity: recursion, exponential, masters theorem
  * Space complexity: same as above
  * 
+ * Sol2 is the iterative version of Backtracking/DFS
  * @author hpPlayer
  * @date May 11, 2016 10:38:24 PM
  */

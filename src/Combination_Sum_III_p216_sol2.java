@@ -23,7 +23,7 @@ public class Combination_Sum_III_p216_sol2 {
         Stack<MyNode> stack = new Stack<MyNode>();
         
         for(int i = 1; i <= 9; i++){
-            //early break here to avoid adding unnecessray num
+            //early break here to avoid adding unnecessary num
             if(i > n) break;
             stack.push(new MyNode(i, 1, i + 1, Arrays.asList(i)));    
         }
@@ -39,7 +39,7 @@ public class Combination_Sum_III_p216_sol2 {
             }
             //we have done precheck when pushing node into stack so all nodes are valid candidate for result
             for(int i = node.start; i <= 9; i++){
-                //early break here to avoid adding unnecessray num
+                //early break here to avoid adding unnecessary num
                 if(i + node.sum > n || 1 + node.count > k) break;
                 List<Integer> list = new ArrayList<Integer>(node.list);
                 list.add(i);

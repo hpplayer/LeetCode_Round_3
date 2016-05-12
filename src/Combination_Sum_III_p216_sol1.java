@@ -34,6 +34,7 @@ Output:
  * So we would have O(9!) loops at max, which is constant
  * Space complexity: same as above
  * 
+ * Sol2 is the iterative version of Backtracking/DFS
  * @author hpPlayer
  * @date May 11, 2016 11:43:15 PM
  */
