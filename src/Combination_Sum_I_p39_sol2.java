@@ -10,6 +10,8 @@ import java.util.*;
  * inputs are positive, so we are bounded by O(2^n)
  * Space complexity: O(2^n)
  * 
+ * Sol2 is the iterative version of Backtracking/DFS
+ * 
  * Remark:
  * Since all inputs are positive, we can avoid the boundary cases like negative inputs and 0, which may force
  * us to look further even if our curr sum = target
