@@ -53,9 +53,12 @@ public class Permutation_Sequence_p60_sol1 {
     	//where i is value of current index
         //Index here can either be used as index of num or be used as the size of prev num
         //ex: n = 3, k = 3.
-        //3/(2!) = 1, 1 is either the index of num, which is 2, or the size of prev num, which is 1
-        //therefore first num would be 2, and we update k to be 3 - 1 * 2 = 1 i.e. we need find the 1st element
-        //left in set, which is 1. So 3th number permutation would be 213
+    	//firstly we need convert k to 0 based k, which is 2
+        //2/(2!) = 1, 1 is either the index of target num in the set, which is 2, or num of digits in curr index that is smaller
+    	//than the digit we select, which is 1 (since we pick 2, that means we only have 1 digit smaller than 2 in this index, so
+    	//we can eliminate 1 * (2!) elements since we have fixed the num in first index 
+        //therefore first num would be 2, and we update k to be 2 - 1 * 2 = 0 i.e. we need find the 1st element
+        //left in set, which is 1. So 3th number permutation of this input(n=3, k=3) would be 213
         
         //set container, we use list structure here, so we can dynamically remove numbers and still keep the correct order of rest set
         List<Integer> set = new ArrayList<Integer>();
