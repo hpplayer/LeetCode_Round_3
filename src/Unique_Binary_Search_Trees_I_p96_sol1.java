@@ -29,6 +29,8 @@ Given n = 3, there are a total of 5 unique BST's.
  * Time complexity: exponential, Master's theorem
  * Space complexity: same as above
  * 
+ * Sol1 is the recursive solution, which is slower but intuitive. (it is based on range split, i.e. we split range and solve)
+ * Sol2 is the iterative solution, which is faster but not intuitive. (it is based on size split, i.e. we split size and solve)
  * 
  * @author hpPlayer
  * @date May 19, 2016 1:23:08 AM
