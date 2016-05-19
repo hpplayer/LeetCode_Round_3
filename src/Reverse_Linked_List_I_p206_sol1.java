@@ -23,7 +23,7 @@ A linked list can be reversed either iteratively or recursively. Could you imple
  * @date Nov 6, 2015 3:44:01 PM
  */
 
-public class Reverse_Linked_List_p206_sol1 {
+public class Reverse_Linked_List_I_p206_sol1 {
     public ListNode reverseList(ListNode head) {
         ListNode prev = null;
         while(head != null){

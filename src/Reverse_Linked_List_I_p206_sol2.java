@@ -7,7 +7,7 @@
  * @author hpPlayer
  * @date Nov 6, 2015 3:46:48 PM
  */
-public class Reverse_Linked_List_p206_sol2 {
+public class Reverse_Linked_List_I_p206_sol2 {
     public ListNode reverseList(ListNode head) {
         //we shall return the tail node
         if(head == null || head.next == null) return head;
