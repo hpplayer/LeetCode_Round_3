@@ -31,7 +31,7 @@ The result can be in any order.
  * @author hpPlayer
  * @date May 17, 2016 10:44:47 PM
  */
-public class Intersection_of_Two_Arrays_p349_sol1 {
+public class Intersection_of_Two_Arrays_I_p349_sol1 {
     public int[] intersection(int[] nums1, int[] nums2) {
         //HashSet solution. using a HashSet to guarantee unique element in result and check an element in
     	//intersection in O(1) time
