@@ -1,57 +1,68 @@
+import java.util.*;
 
 public class Surrounded_Regions_p130_sol2 {
+	public static void main(String[] args){
+		String[] strs = {"OXXOX","XOOXO","XOXOX","OXOOO","XXOXO"};
+		char[][] board = new char[strs.length][strs[0].length()];
+		for(int i = 0; i < board.length; i++){
+			board[i] = strs[i].toCharArray();
+		}
+
+		
+		//char[][] board = {"XOXOXOOOXO","XOOXXXOOOX","OOOOOOOOXX","OOOOOOXOOX","OOXXOXXOOO","XOOXXXOXXO","XOXOOXXOXO","XXOXXOXOOX","OOOOXOXOXO","XXOXXXXOOO"};
+		Surrounded_Regions_p130_sol2 test = new Surrounded_Regions_p130_sol2();
+		test.solve(board);
+	}
+	
     public void solve(char[][] board) {
-        if(board.length == 0) return;
+        //Union Find solution. We will firstly mark each edge O, then do union-find to each O, and check if it is in same union with 
+        //any edge O
         
+        //boundary check
+        if(board.length == 0) return;
         int m = board.length, n = board[0].length;
         
-        int[] roots = new int[m * n];
-        boolean[] hasEdgeO = new boolean[m * n];
+        boolean[] isEdge = new boolean[m*n];
+        int[] roots = new int[m*n];
+        int[] xOffset = {0, 0, -1, 1};
+        int[] yOffset = {1, -1, 0, 0};
         
-        for(int i = 0; i < m * n; i++){
-            roots[i] = i;
-            int x = i / n;
-            int y = i % n;
-            if(board[x][y] == 'O' && (x == 0 || x == m - 1 || y == 0 || y == n - 1)){
-                hasEdgeO[i] = true;
-            }
-        }
-        
-        for(int i = 0; i < m * n; i++){
-            int x = i / n;
-            int y = i % n;
-            if(board[x][y] == 'O'){
-                if(x - 1 >= 0 && board[x-1][y] == 'O'){
-                    union(i, i - n, roots, hasEdgeO);
-                }
-                
-                if(y - 1 >= 0 && board[x][y-1] == 'O'){
-                    union(i, i - 1, roots, hasEdgeO);
-                }
-            }
-        }
-        
+        //firstly initalize the root[]
         for(int i = 0; i < m*n; i++){
-            int x = i / n;
-            int y = i % n;
+        	int x = i/n, y = i%n;
+            roots[i] = i;
+            if(board[x][y] == 'O' && ( x == 0 || x == m - 1 || y == 0 || y == n - 1))
+                	isEdge[i] = true;
+        }
+        
+        //then do union and find to all Os
+        for(int i = 0; i < m*n; i++){
+        	int x = i/n, y = i%n;
             if(board[x][y] == 'O'){
-                int root = roots[i];
-                if(!hasEdgeO[root]) board[x][y] = 'X';
+                    for(int j = 0; j < xOffset.length; j++){
+                        int newX = x + xOffset[j];
+                        int newY = y + yOffset[j];
+                        if( newX >= 0 && newX < m && newY >= 0 && newY < n && board[newX][newY] == 'O' ){
+                            int root1 = find(roots, newX * n + newY);
+                            int root2 = find(roots, i);
+                            roots[root2] = root1;
+                            isEdge[root1] =  isEdge[root1] || isEdge[root2];
+                        }
+                }
             }
         }
+        //System.out.println(Arrays.toString(isEdge));
+        for(int i = 0; i < m * n; i++){
+            int x = i/n, y = i%n;
+            int root = find(roots, i);
+            if(!isEdge[root]) board[x][y] = 'X';
+        }
+        
     }
     
-    public void union(int r1, int r2, int[] roots, boolean[] hasEdgeO){
-        int root1 = find(r1, roots);
-        int root2 = find(r2, roots);
-        boolean EdgeO = hasEdgeO[root1] || hasEdgeO[root2];
-        roots[root1] = root2;
-        hasEdgeO[root1] = EdgeO;
-    }
-    
-    public int find(int root, int[] roots){
+    public int find(int[] roots, int root){
         if(roots[root] == root) return root;
-        roots[root] = find(roots[root], roots);
+        roots[root] = find(roots, roots[root]);
         return roots[root];
     }
 }
