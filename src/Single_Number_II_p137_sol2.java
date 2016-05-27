@@ -11,7 +11,7 @@
  * @author hpPlayer
  * @date May 26, 2016 12:02:19 AM
  */
-public class Single_Number_I_p137_sol2 {
+public class Single_Number_II_p137_sol2 {
     public int singleNumber(int[] nums) {
         //bit manipulation solution. We build result num bit by bit
         int result = 0;

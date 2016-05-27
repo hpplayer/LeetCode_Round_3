@@ -28,7 +28,7 @@ Your algorithm should have a linear runtime complexity. Could you implement it w
  * @author hpPlayer
  * @date May 25, 2016 11:50:30 PM
  */
-public class Single_Number_I_p137_sol1 {
+public class Single_Number_II_p137_sol1 {
     public int singleNumber(int[] nums) {
         //bit manipulation solution
         
