@@ -24,7 +24,7 @@ You may assume that the array is non-empty and the majority element always exist
  * @author hpPlayer
  * @date May 30, 2016 10:17:12 PM
  */
-public class Majority_Element_p169_sol1 {
+public class Majority_Element_I_p169_sol1 {
     public int majorityElement(int[] nums) {
         //Moore voting algorithm
         
