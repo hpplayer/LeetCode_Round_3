@@ -35,5 +35,18 @@ Or does the odd/even status of the number help you in calculating the number of 
  * @date Jun 5, 2016 9:50:36 PM
  */
 public class Counting_Bits_p338_sol1 {
-
+    public int[] countBits(int num) {
+        //Observation + DP + bit manipulation solution. We divide each input into two parts 1) n >> 1 2) n & 1
+        
+        //num from 0 to num (both inclusive)
+        int[] dp = new int[num+1];
+        
+        for(int i = 1; i <= num; i++){
+            //each num can be decomposed into 1) n >> 1 (prev results) and 2) n & 1 (odd or even)
+            //Notice: to have () around bit manipulation!!!!!!!!!!!!!!!!!!!!!!!!
+            dp[i] = dp[i>>1] + (i&1);
+        }
+        
+        return dp;
+    }
 }
