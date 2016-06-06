@@ -24,7 +24,7 @@ Output: index1=1, index2=2
  * @author hpPlayer
  * @date Nov 5, 2015 12:34:28 AM
  */
-public class Two_Sum_p1_sol1 {
+public class Two_Sum_I_p1_sol1 {
     public int[] twoSum(int[] nums, int target) {
         //key is value, val is index of that val
         Map<Integer, Integer> hs = new HashMap<Integer, Integer>();
