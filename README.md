@@ -22,3 +22,8 @@ I learnt a lot from this round3 programming. And I really enjoyed it!
 
 Thanks, leetcode
 Thanks, myself!
+
+Screenshoots:
+![ScreenShot](github_round3_1.png)
+![ScreenShot](github_round3_2.png)
+![ScreenShot](github_round3_3.png)
