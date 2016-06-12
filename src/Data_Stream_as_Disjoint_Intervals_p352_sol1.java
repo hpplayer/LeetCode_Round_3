@@ -57,7 +57,9 @@ public class Data_Stream_as_Disjoint_Intervals_p352_sol1 {
     
     public void addNum(int val) {
         //we have early pruning here, in case we already have val in TreeMap, we will not check it again
-        
+        //Notice: if we forget to check if there is already an existing key for input val, then our low and
+    	//high will both be null, and therefore we will replace existing key with a new value, which may
+    	//cause error!!!!!!!!!!!!
         if( tree.containsKey(val) ) return;
         
         Integer low = tree.lowerKey(val);
