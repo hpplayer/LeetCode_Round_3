@@ -16,6 +16,11 @@ palindromic substring.
  * 
  * Sol2 lists a DP solution that also starts with cores, but use extra space. However It is a good practice for DP method
  * 
+ * Remark:
+ * If we can modify extendFromMid() a bit, to compare the chars at (left - 1) and (right + 1), and we also modify
+ * longestPalindrome() that we only call extendFromMid() with single mid case or two mid case (2 chars are same)
+ * then the program can be faster!
+ * 
  * @author hpPlayer
  * @date Mar 11, 2016 5:42:47 PM
  */
