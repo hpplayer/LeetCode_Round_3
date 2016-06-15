@@ -58,6 +58,8 @@ public class Wildcard_Matching_p44_sol1 {
                     boolean zeroUse = dp[i][j-1];
                     
                     //use multiple "*", dp[i-1][j] stores result of using multiple "*" to matches chars in s
+                    //dp[i-1][j] include the case we use zero "*" to match or the case we use multiple "*" 
+                    //to match
                     boolean multiUse = i > 0 && dp[i-1][j];
                     
                     dp[i][j] = zeroUse || multiUse;
