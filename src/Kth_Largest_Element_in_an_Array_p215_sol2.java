@@ -6,8 +6,9 @@ import java.util.PriorityQueue;
  * We maintain a priorityQueue with size k. If size of heap < k or num > pq.peek(), then we need add curr num into heap
  * If we found the size >= k, then we remove top num in heap, which is kth largest number we visited so far, then add the new num
  * 
+ * Time complexity:
  * In worst case, we need add all nums into the heap, including the adding/deleting cost, it is O(NLogK)
- * Time complexity: O(k)
+ * Space complexity: O(k)
  * 
  * @author hpPlayer
  * @date Feb 13, 2016 1:13:29 AM
