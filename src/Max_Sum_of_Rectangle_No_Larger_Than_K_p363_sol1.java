@@ -59,6 +59,10 @@ What if the number of rows is much larger than the number of columns?
  * For the follow-up What if the number of rows is much larger than the number of columns?
  * We just need to do row scan in the outer loop and do col scan in inner loop. 
  * 
+ * Check Minimum_Size_Subarray_Sum_p209_sol2 for another problem about finding maxSum subArray
+ * though we may not easily take solution from Minimum_Size_Subarray_Sum_p209_sol2 into this solution as 
+ * here we allow negatives
+ * 
  * @author hpPlayer
  * @date Jun 21, 2016 10:47:04 PM
  */

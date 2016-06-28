@@ -41,6 +41,11 @@ public class Minimum_Size_Subarray_Sum_p209_sol2 {
             //i is the right boundary of sliding window
             if(sums[i] >= s){
                 //found a valid window that has sum >= s, now we need move left boundary to make the window smallest possible
+            	//we are going to find the largest subarray sums[j] that makes sums[i] - sums[j] >= s
+            	//We require sums[j] <= sums[i] - s, and the left boundary of win would just be the index after j
+            	//in case we have sums[j] = sums[i] - s, then we will return j + 1 as the left boundary of new win
+            	//in case we don't have sums[j] = sums[i] - s in the array, then we will return right + 1 in the binary search
+            	//which is just left. Thats why we return left in the binarySearch instead of right
                 left = binarySearch(left, i, sums[i] - s, sums);
                 //update result if possible
                 result = Math.min(result, i - left + 1);

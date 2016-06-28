@@ -29,6 +29,8 @@ Given an array of integers, find out whether there are two distinct indices i an
  * Sol1 is the bucketing + sliding window solution. We use bucketing to sort numbers in each window
  * Sol2 is the TreeSet + sliding window solution, we use TreeSet to sort numbers in each window
  * 
+ * Another bucketing problem: Maximum_Gap_p164_sol1
+ * 
  * @author hpPlayer
  * @date Nov 11, 2015 11:58:09 PM
  */

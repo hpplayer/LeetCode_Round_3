@@ -19,6 +19,9 @@ Given "abcd", return "dcbabcd".
  * 
  * Then we reverse non-palindrome part and attach it before head, then we are done
  * 
+ * See my explanation on leetCode:
+ * https://leetcode.com/discuss/64309/clean-kmp-solution-with-super-detailed-explanation
+ * 
  * @author hpPlayer
  * @date Nov 2, 2015 10:54:15 PM
  */
