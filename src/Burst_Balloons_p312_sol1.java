@@ -44,6 +44,8 @@ Return 167
  * In maxCoins2(), dp[i][j] means the max coin we can get from burst balloons among i+1 and j-1, so i and j are not inclusive, and we don't need extra balloons to
  * calculate the last balloon. Also we preprocess the input to exclude cells with 0 value, no significant improvement though
  * 
+ * Another similar O(N^3) dp solution: Longest_Palindromic_Substring_p5_sol2
+ * 
  * @author hpPlayer
  * @date Jan 26, 2016 1:27:42 PM
  */

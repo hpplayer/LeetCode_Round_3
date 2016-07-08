@@ -46,7 +46,7 @@ public class Text_Justification_p68_sol1 {
                 avergeSpaces = (maxWidth - len) / (j - i - 1) + 1;
                 extraSpaces = (maxWidth - len) % (j - i - 1);
             }else{
-                //specal cases, last line or a line with one word
+                //Special cases, last line or a line with one word
                 //for last line, we still add one space after each word
                 //for line with single word, we won't add space after it
                 avergeSpaces = j == words.length? 1 : 0;

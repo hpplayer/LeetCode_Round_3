@@ -35,6 +35,8 @@ You may assume both pattern and str contains only lowercase letters.
  * Time complexity: recursion, masters theorem, but must be exponential since each char in pattern can be matched to all substrings in str
  * Space complexity: same as above
  * 
+ * Sol2 provides another implementation of DFS solution and using two HashMaps
+ * 
  * @author hpPlayer
  * @date Mar 3, 2016 10:30:57 AM
  */

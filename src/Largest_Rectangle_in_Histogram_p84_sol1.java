@@ -42,6 +42,9 @@ return 10.
  * Time complexity: Each bar will be in the stack once, so the time complexity should be O(n)
  * Space complexity: O(n) in case all incoming bars are non-descending.
  * 
+ * This solution is similar to Remove_Duplicate_Letters_p316_sol1, where we also need to maintain a stack
+ * with certain order
+ * 
  * @author hpPlayer
  * @date Nov 6, 2015 12:57:36 AM
  */

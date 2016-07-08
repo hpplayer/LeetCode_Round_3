@@ -79,8 +79,27 @@ public class Encode_and_Decode_Strings_p271_sol1 {
 
     // Decodes a single string to a list of strings.
     public static List<String> decode(String s) {
-        //if argument is non-negative (0 or -1), then split will be applied as many as possible (basically, it will help cover empty stirng)
+        //if argument is non-positive (0 or -1), then split will be applied as many as possible (basically, it will help cover empty stirng)
         //0 will remove trailing empty strings while -1 will keep them
+    	//If argument n is greater than zero then the pattern will be applied at most n - 1 times,
+    	//the array's length will be no greater than n, and the array's last entry will contain all input beyond the last matched delimiter.
+    	
+    	/*
+    	String: "boo:and:foo"
+    	o	5	{ "b", "", ":and:f", "", "" }
+    	o	-2	{ "b", "", ":and:f", "", "" }
+    	o	0	{ "b", "", ":and:f" }
+    	
+        String a = "#";
+	    System.out.println(Arrays.toString(a.split("#", -1)));
+	    System.out.println(Arrays.toString(a.split("#", 0)));
+	    System.out.println(Arrays.toString(a.split("#", 1)));
+	    System.out.println(Arrays.toString(a.split("#")));
+	    [, ] len:2
+		[] len: 0
+		[#] len: 1
+		[] len: 0
+    	 */
         String[] strs = s.split("/#/", -1);
         
         List<String> result = new ArrayList<String>();

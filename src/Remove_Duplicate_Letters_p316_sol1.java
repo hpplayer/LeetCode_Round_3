@@ -24,6 +24,9 @@ Return "acdb"
  * Time complexity: each char will be visited at most twice (insertion and removal from deque), so the time complexity should be O(n)
  * Space complexity: O(1), as our stack will be at most O(26) long
  * 
+ * This solution is similar to Largest_Rectangle_in_Histogram_p84_sol1, where we also need to maintain a stack
+ * with certain order
+ * 
  * @author hpPlayer
  * @date Feb 18, 2016 11:53:09 AM
  */

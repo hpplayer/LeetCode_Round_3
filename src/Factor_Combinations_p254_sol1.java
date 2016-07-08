@@ -79,6 +79,7 @@ public class Factor_Combinations_p254_sol1 {
             //since i <= n/i, we will add i first, then n/i
             copy.add(i);
             copy.add(n/i);
+            result.add(copy);
             
             //then we try to decompose larger n/i factor, and our later factors shall not be > i, since i has been inserted into list 
             temp.add(i);

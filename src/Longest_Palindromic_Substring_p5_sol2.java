@@ -9,6 +9,8 @@
  * Time complexity: O(N^2)
  * Space complexity: O(N^2)
  * 
+ * Another similar O(N^3) dp solution: Burst_Balloons_p312_sol1
+ * 
  * @author hpPlayer
  * @date Mar 11, 2016 7:31:29 PM
  */
