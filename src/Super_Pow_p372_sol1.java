@@ -47,6 +47,9 @@ public class Super_Pow_p372_sol1 {
         for(int c : b){
             //power prev result by 10, and add a^c%1337 to it
             //use (a*b)%1337 = (a%1337 * (b%1337))%1337 to split inputs
+        	//ex: x^ab
+        	//1st round; x^a
+        	//2rd round ((x^a)^10) * (x^b)
             result = (pow(result, 10) * pow(a, c)) %1337;
         }
         

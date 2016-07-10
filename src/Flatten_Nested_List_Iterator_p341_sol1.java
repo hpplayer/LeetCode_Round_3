@@ -28,6 +28,13 @@ By calling next repeatedly until hasNext returns false, the order of elements re
  * we want hasNext() directly report false. To do that, we have to improve our hasNext(), we will analyze
  * each list, we only put non-empty list into the stack and pop out those empty lists
  * 
+ * Why use stack?
+ * Input:
+ * [ [  [d], e  ], a] 
+ * In stack:
+ * [ [d], e ], a  => [d], e, a => d, e, a
+ * Stack can help us decompose the nested list while maintaining the order
+ *   
  * Time complexity: O(N), since each element will be scanned once
  * Space complexity: O(k), where k is depth of deepest nested list
  * 

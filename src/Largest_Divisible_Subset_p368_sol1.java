@@ -25,9 +25,9 @@ Result: [1,2,4,8]
  * 
  * To add a new num into one of the existing subset, we don't need to check each num in existing subset,
  * that is too costly and not necessary, instead we just need to check the smallest and largest num in 
- * existing subset. The new incoming num should either divide smallest num without remainder or be divided 
- * by largest num without remainder. However if we can sort the the input, then we just need to check one end
- * either largest or smallest num. 
+ * existing subset. The new incoming num should either divide smallest num without remainder (Ex: 2->[4] )or
+ * be divided by largest num without remainder (ex: 32->[4,16]). However if we can sort the the input,
+ * then we just need to check one end either largest or smallest num. 
  * 
  * Here is the basic idea. We firstly sort the array,  then create a dp array. The value in dp[] means how 
  * long the subset would be with ending at this cell. The for each new input, we just need to check all prev
@@ -39,6 +39,9 @@ Result: [1,2,4,8]
  * 
  * Time complexity: O(N^2)
  * Space complexity: O(N)
+ * 
+ * Remark:
+ * we can avoid dp[] and query hs.get(i).size() directly, but that would cost the speed a little slower
  * 
  * @author hpPlayer
  * @date Jun 27, 2016 11:04:51 PM

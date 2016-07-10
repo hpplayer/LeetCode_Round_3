@@ -88,6 +88,10 @@ public class Line_Reflection_p356_sol1 {
             
             if( (points[left][0] != points[right][0]) && (points[left][1] != points[right][1]) ) return false;
             
+            //skip duplicate points. We allow duplicate points match one point
+            while(left + 1 <= right && Arrays.equals(points[left + 1], points[left]))  left++;
+            while(left <= right - 1 && Arrays.equals(points[right - 1], points[right]))  right--;
+            
             left++;
             right--;
         }

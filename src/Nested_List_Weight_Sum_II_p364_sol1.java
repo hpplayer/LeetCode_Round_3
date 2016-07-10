@@ -29,6 +29,9 @@ Given the list [1,[4,[6]]], return 17. (one 1 at depth 3, one 4 at depth 2, and 
  * Time complexity: O(N), N is num of inputs we have
  * Space complexity: O(H), H is maxDepth
  * 
+ * Sol1 is intuitive DFS solution with Hashmap and global depth
+ * Sol2 is non-intuitive DFS solution without hashMap nor global depth
+ * 
  * @author hpPlayer
  * @date Jun 22, 2016 8:11:20 PM
  */
